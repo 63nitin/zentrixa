@@ -65,7 +65,7 @@ function Footer() {
           </div>
         </div>
 
-        {/* Column 2: Services Links */}
+       
         <div className="lg:col-span-1">
           <h4 className="text-lg font-semibold text-white mb-5">
             Services
