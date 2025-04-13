@@ -60,7 +60,7 @@ const PricingPlan = () => {
         <h2 className="text-2xl font-bold mb-10">Choose Your Hosting Plan</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 ">
           {plans.map((plan, index) => (
-            <div key={index} className="bg-gradient-to-r from-gray-900 via-green-950 border border-green-600/30 shadow-2xl p-6 rounded-2xl transition delay-150 duration-300 ease-in-out hover:scale-105">
+            <div key={index} className="h-full w-full bg-gradient-to-r from-gray-900 via-green-950 border border-green-600/30 shadow-2xl p-5 rounded-2xl transition delay-150 duration-300 ease-in-out hover:scale-105">
               <h3 className="text-xl font-semibold mb-2">{plan.name}</h3>
               <p className="text-sm mb-2">{plan.tagline}</p>
               <p className="text-sm line-through">{plan.originalPrice}</p>

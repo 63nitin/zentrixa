@@ -74,28 +74,22 @@ after:bg-green-400 /* Explicitly set again for safety */
 
   return (
     // z-50 ensures navbar stays above the mobile menu panel (z-40)
-    <nav className=" bg-green-800 border-none rounded-2xl text-white py-4 px-6 md:px-10 lg:px-16 shadow-md sticky top-0 z-50">
+    <nav className=" bg-green-800 border-none rounded-2xl text-white py-3 px-6 md:px-10 lg:px-16 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
       
-<div className="flex items-center bg-gradient-to-r from-gray-800 via-green-800 rounded-3xl">
+<div className="">
 
   {/* Image Tag */}
   <img
     // Correct path for files in the 'public' folder: Start with '/'
-    src="/ZentrixaLogo.png"
+    src="/fullLog.png"
 
     // Add descriptive alt text for accessibility
     alt="Zentrixa Logo"
 
-    className="h-16 w-full "
+    className="p-0 h-12 w-14 scale-350 ml-12 "
   />
-
-  {/* Text part of the logo */}
-  {/* Apply text styles directly to the text */}
-  <span className="text-3xl font-bold mt-3  text-white">
-    entrixa
-  </span>
 
 </div>
 

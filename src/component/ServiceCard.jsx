@@ -2,7 +2,7 @@ import React from 'react';
 
 function ServiceCard({ IconComponent, title, description }) {
   return (
-    <div className="bg-slate-900 p-6 rounded-lg border border-green-600/30 shadow-md h-full transition delay-150 duration-300 ease-in-out hover:scale-105"> {/* Card styling */}
+    <div className="bg-slate-900 p-6 rounded-lg border border-green-600/30 shadow-md h-full  transition delay-150 duration-300 ease-in-out hover:scale-105"> {/* Card styling */}
       {IconComponent && (
         <div className="mb-4">
           {/* Render the icon */}
