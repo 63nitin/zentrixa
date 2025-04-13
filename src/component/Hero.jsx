@@ -54,7 +54,7 @@ function Hero() {
 
   return (
     // Added border class back correctly (removed -1)
-    <section className="bg-gradient-to-b border border-green-800 rounded-2xl from-green-800 to-gray-950 text-white min-h-[calc(100vh-68px)] flex items-center py-16 px-6 md:px-10 lg:px-16">
+    <section className="bg-gradient-to-b border border-green-800 rounded-b-xl from-green-800 to-gray-950 text-white min-h-[calc(100vh-68px)] flex items-center py-16 px-6 md:px-10 lg:px-16">
       <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
 
         {/* Left Column: Text Content */}

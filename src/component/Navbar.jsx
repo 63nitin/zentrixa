@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // Simple inline SVGs for icons (replace with an icon library like Heroicons if preferred)
 const HamburgerIcon = () => (
@@ -74,12 +75,12 @@ after:bg-green-400 /* Explicitly set again for safety */
 
   return (
     // z-50 ensures navbar stays above the mobile menu panel (z-40)
-    <nav className=" bg-green-800 border-none rounded-2xl text-white py-3 px-6 md:px-10 lg:px-16 shadow-md sticky top-0 z-50">
+    <nav className=" bg-green-800 border-none rounded-t-lg rounded-b-sm text-white py-3 px-6 md:px-10 lg:px-16 shadow-md sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
       
-<div className="">
-
+<div className=" border-none">
+<Link to="/">
   {/* Image Tag */}
   <img
     // Correct path for files in the 'public' folder: Start with '/'
@@ -88,21 +89,19 @@ after:bg-green-400 /* Explicitly set again for safety */
     // Add descriptive alt text for accessibility
     alt="Zentrixa Logo"
 
-    className="p-0 h-12 w-14 scale-350 ml-12 "
+    className="p-0 h-12 w-14 scale-350 ml-12 border-none "
   />
-
+</Link>
 </div>
 
         {/* Desktop Navigation Links */}
         {/* Desktop Navigation Links - Uses updated desktopLinkClasses */}
         <div className="hidden md:flex space-x-6 items-center">
-          <a href="#home" className={desktopLinkClasses}>Home</a>
-          <a href="#about" className={desktopLinkClasses}>About Us</a>
-          <a href="#services" className={desktopLinkClasses}>Services</a>
-          <a href="#pages" className={`${desktopLinkClasses} flex items-center`}>
-            Pages <span className="ml-1 text-xs">▼</span>
-          </a>
-          <a href="#contact" className={desktopLinkClasses}>Contact Us</a>
+
+         <Link to="/" className={desktopLinkClasses}>Home</Link>
+          <Link to="/about" className={desktopLinkClasses}>About Us</Link>
+          <Link to="/service" className={desktopLinkClasses}>Services</Link>
+          <Link to="/contact" className={desktopLinkClasses}>Contact Us</Link>
         </div>
 
         {/* Login Button (Desktop) */}
@@ -150,21 +149,16 @@ after:bg-green-400 /* Explicitly set again for safety */
          {/* Mobile Navigation Links */}
          <nav className="flex flex-col space-y-5 mt-4">
             {/* Add onClick={toggleMobileMenu} to each link to close menu on navigation */}
-            <a href="#home" className={mobileLinkClasses} onClick={toggleMobileMenu}>Home</a>
-            <a href="#about" className={mobileLinkClasses} onClick={toggleMobileMenu}>About Us</a>
+            <Link to="/" className={mobileLinkClasses} onClick={toggleMobileMenu}>Home</Link>
+            <Link to="/about" className={mobileLinkClasses} onClick={toggleMobileMenu}>About Us</Link>
             {/* Example for dropdown indicator if needed */}
-            <a href="#services" className={`${mobileLinkClasses} flex justify-between items-center`} onClick={toggleMobileMenu}>
+            <Link to="/service" className={`${mobileLinkClasses} flex justify-between items-center`} onClick={toggleMobileMenu}>
                 Services <span className="text-xs">▼</span>
-            </a>
-            <a href="#pages" className={`${mobileLinkClasses} flex justify-between items-center`} onClick={toggleMobileMenu}>
-                Pages <span className="text-xs">▼</span>
-            </a>
-            <a href="#contact" className={mobileLinkClasses} onClick={toggleMobileMenu}>Contact Us</a>
+            </Link>
+          
+            <Link to="/contact" className={mobileLinkClasses} onClick={toggleMobileMenu}>Contact Us</Link>
 
-             {/* Mobile Login Button */}
-            <button className="mt-8 w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-5 rounded-lg text-lg transition duration-300">
-                Login
-            </button>
+    
          </nav>
       </div>
     </nav>

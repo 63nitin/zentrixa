@@ -56,13 +56,7 @@ const servicesData = [
 function ServicesPage() {
   return (
     <div className=" text-white min-h-screen">
-      <Helmet>
-        {/* Using metadata from your original code */}
-        <title>Our Services | Zentrixa - Web Development & Digital Growth</title>
-        <meta name="description" content="Zentrixa helps individuals, schools, and businesses build stunning websites, manage social media, and enhance online reputation with modern tools." />
-        <meta name="keywords" content="web development, website design, social media management, online reputation, Zentrixa services" />
-        <meta name="robots" content="index, follow" />
-      </Helmet>
+   
 
       <div className="container mx-auto px-6 py-16 md:py-24">
         {/* Header Section */}

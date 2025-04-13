@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom'; // Import Link for internal navigation
 
 // --- Placeholder Icons ---
 // TODO: Replace with actual SVGs or icons from a library (e.g., Heroicons, React Icons)
@@ -13,17 +14,6 @@ const XTwitterIcon = (props) => (
 );
 // --- End Placeholder Icons ---
 
-
-// --- Services Data (from image) ---
-const serviceLinks = [
-  { name: 'Shared Hosting', href: '#' },
-  { name: 'VPS Hosting', href: '#' },
-  { name: 'Cloud Hosting', href: '#' },
-  { name: 'Dedicated Server', href: '#' },
-  { name: 'Domain Registration', href: '#' },
-  { name: 'Website Builder', href: '#' },
-];
-
 // --- Social Links Data ---
 const socialLinks = [
     { name: 'Facebook', href: '#', Icon: FacebookIcon },
@@ -31,144 +21,103 @@ const socialLinks = [
     { name: 'X/Twitter', href: '#', Icon: XTwitterIcon },
 ];
 
-
 function Footer() {
-  return (
-    <footer className=" text-gray-300 py-16 px-6">
-      <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
+  const currentYear = new Date().getFullYear();
 
-        {/* Column 1: Info & Social */}
-        <div className="lg:col-span-1">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
-            Let's Build Your <br />
-            <span className="text-green-400">Online Presence!</span>
-          </h2>
-          <p className="text-base text-gray-400 mb-6 leading-relaxed">
-            Your Website Deserves The Best. Whether It's Hosting, Domains, Or Security, We're Here To Help. Let's Get Started Today!
-          </p>
-          <div className="space-y-2 text-sm mb-8">
-            <p><span className="font-medium text-white">Contact:</span> <a href="tel:+12125551212" className="hover:text-green-400">+1 (212) 555-1212</a></p>
-            <p><span className="font-medium text-white">Instagram:</span> <a href="#" className="hover:text-green-400">@yourdomainhandle</a></p> {/* Replace handle */}
+  // Reusable link style
+  const linkStyle = "hover:text-green-400 transition-colors duration-200";
+
+  return (
+    <footer className=" text-gray-400 border-t border-gray-700/50">
+      <div className="container mx-auto px-6 py-12 lg:py-16">
+        {/* Top Section: Grid Layout */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+
+          {/* Column 1: Logo & Tagline */}
+          <div>
+            {/* Logo (reuse from navbar) */}
+            <Link to="/" className="inline-block mb-4" aria-label="Go to Homepage">
+              <img src="/ZentrixaLogo.png" alt="Zentrixa Logo" className="h-12 w-auto ml-4 scale-300 " />
+              {/* Optionally add text part if needed: <span className="text-xl font-bold text-white ml-2">entrixa</span> */}
+            </Link>
+            <p className="text-sm leading-relaxed mt-3">
+              Building stunning digital experiences. We help businesses grow online with web development, social media, and reputation management.
+            </p>
           </div>
+
+          {/* Column 2: Quick Links */}
+          <div>
+            <h5 className="text-base font-semibold text-white mb-4 tracking-wide">Quick Links</h5>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/" className={linkStyle}>Home</Link></li>
+              <li><Link to="/about" className={linkStyle}>About Us</Link></li>
+              <li><Link to="/services" className={linkStyle}>Services</Link></li>
+              {/* Add other key links */}
+              {/* <li><Link to="/contact" className={linkStyle}>Contact</Link></li> */}
+            </ul>
+          </div>
+
+          {/* Column 3: Key Services */}
+          <div>
+            <h5 className="text-base font-semibold text-white mb-4 tracking-wide">Our Expertise</h5>
+            <ul className="space-y-2 text-sm">
+               {/* Update these links if you have specific service anchors/pages */}
+              <li><Link to="/services#web-development" className={linkStyle}>Web Development</Link></li>
+              <li><Link to="/services#social-media" className={linkStyle}>Social Media</Link></li>
+              <li><Link to="/services#reputation" className={linkStyle}>Reputation Management</Link></li>
+              <li><Link to="/services#analytics" className={linkStyle}>Analytics</Link></li>
+            </ul>
+          </div>
+
+          {/* Column 4: Contact Info */}
+          <div>
+            <h5 className="text-base font-semibold text-white mb-4 tracking-wide">Get In Touch</h5>
+            <ul className="space-y-3 text-sm">
+              <li>
+                 <a href="tel:+12125551212" className={`flex items-center ${linkStyle}`}>
+                   {/* Phone Icon Placeholder */}
+                   <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                   +1 (212) 555-1212 {/* Replace */}
+                 </a>
+              </li>
+              <li>
+                 <a href="mailto:info@zentrixa.com" className={`flex items-center ${linkStyle}`}>
+                   {/* Email Icon Placeholder */}
+                   <svg className="w-4 h-4 mr-2 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                   info@zentrixa.com {/* Replace */}
+                 </a>
+               </li>
+              <li className="flex items-start">
+                 {/* Location Icon Placeholder */}
+                 <svg className="w-4 h-4 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                 <span>Prayagraj, Uttar Pradesh, India</span> {/* Replace with your address if needed */}
+               </li>
+            </ul>
+          </div>
+
+        </div> {/* End Top Grid */}
+
+        {/* Bottom Bar: Copyright & Social */}
+        <div className="border-t border-gray-800/50 pt-6 mt-8 flex flex-col sm:flex-row justify-between items-center text-sm">
+          <p>&copy; {currentYear} Zentrixa. All Rights Reserved.</p>
           {/* Social Icons */}
-          <div className="flex space-x-4">
-            {socialLinks.map((item) => (
+          <div className="flex space-x-4 mt-4 sm:mt-0">
+             {socialLinks.map((item) => (
               <a
                 key={item.name}
                 href={item.href}
-                className="w-9 h-9 rounded-full border border-gray-600 flex items-center justify-center text-gray-400 hover:text-green-400 hover:border-green-400 transition-colors duration-300"
+                target="_blank" // Open social links in new tab
+                rel="noopener noreferrer" // Security best practice
+                className="text-gray-500 hover:text-green-400 transition-colors duration-300"
                 aria-label={item.name}
               >
                 <item.Icon className="w-5 h-5" />
               </a>
             ))}
           </div>
-        </div>
+        </div> {/* End Bottom Bar */}
 
-       
-        <div className="lg:col-span-1">
-          <h4 className="text-lg font-semibold text-white mb-5">
-            Services
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {serviceLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="px-3.5 py-1.5 rounded-full border border-gray-700 bg-gray-800/50 text-xs text-gray-300 hover:bg-green-600/30 hover:text-white hover:border-green-500 transition-colors duration-200"
-              >
-                {link.name}
-              </a>
-            ))}
-          </div>
-        </div>
-
-        {/* Column 3: Form */}
-        <div className="lg:col-span-1">
-          <div className=" p-6 rounded-lg shadow-lg border border-green-600/30">
-            <h4 className="text-lg font-semibold text-white mb-6">
-              Secure Your Domain & Hosting Now
-            </h4>
-            {/* NOTE: Add form handling logic (state, onSubmit) as needed */}
-            <form className="space-y-4">
-              {/* Example Input (Use readOnly if it's display only) */}
-              <div>
-                 <label htmlFor="website" className="sr-only">Website</label>
-                 <input
-                    type="text"
-                    name="website"
-                    id="website"
-                    readOnly
-                    value="WebPro.com" // Or fetch dynamically
-                    className="w-full px-4 py-2.5 bg-gray-800 border border-gray-600 rounded-md text-sm text-gray-400 focus:ring-green-500 focus:border-green-500 cursor-default"
-                 />
-              </div>
-               {/* Select Hosting Plan */}
-               <div>
-                  <label htmlFor="hosting-plan" className="sr-only">Select hosting plan</label>
-                  <select
-                    id="hosting-plan"
-                    name="hosting-plan"
-                    className="w-full px-4 py-2.5 bg-gray-800 border border-gray-600 rounded-md text-sm text-white focus:ring-green-500 focus:border-green-500"
-                    defaultValue=""
-                  >
-                    <option value="" disabled>Select hosting plan</option>
-                    <option value="shared">Shared Hosting</option>
-                    <option value="vps">VPS Hosting</option>
-                    <option value="cloud">Cloud Hosting</option>
-                    {/* Add other plans */}
-                  </select>
-               </div>
-              {/* Your Email Input */}
-              <div>
-                <label htmlFor="email" className="sr-only">Your email</label>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="Your email"
-                  required
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-gray-600 rounded-md text-sm text-white placeholder-gray-500 focus:ring-green-500 focus:border-green-500"
-                />
-              </div>
-              {/* Your Password Input */}
-              <div>
-                <label htmlFor="password" className="sr-only">Your password</label>
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  placeholder="Your password"
-                  required
-                  className="w-full px-4 py-2.5 bg-gray-800 border border-gray-600 rounded-md text-sm text-white placeholder-gray-500 focus:ring-green-500 focus:border-green-500"
-                />
-              </div>
-               {/* Choose Option Select */}
-               <div>
-                 <label htmlFor="option-choice" className="sr-only">Please Choose Option Here</label>
-                 <select
-                   id="option-choice"
-                   name="option-choice"
-                   className="w-full px-4 py-2.5 bg-gray-800 border border-gray-600 rounded-md text-sm text-white focus:ring-green-500 focus:border-green-500"
-                   defaultValue=""
-                 >
-                   <option value="" disabled>Please Choose Option Here</option>
-                   <option value="option1">Option 1</option>
-                   <option value="option2">Option 2</option>
-                 </select>
-               </div>
-              {/* Submit Button */}
-              <button
-                type="submit"
-                className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-md transition duration-300"
-              >
-                Purchase Now
-              </button>
-            </form>
-          </div>
-        </div>
-
-      </div>
+      </div> {/* End Container */}
     </footer>
   );
 }
