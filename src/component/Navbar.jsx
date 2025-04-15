@@ -75,7 +75,7 @@ after:bg-green-400 /* Explicitly set again for safety */
 
   return (
     // z-50 ensures navbar stays above the mobile menu panel (z-40)
-    <nav className=" bg-green-800 border-none rounded-t-lg rounded-b-sm text-white py-3 px-6 md:px-10 lg:px-16 shadow-md sticky top-0 z-50">
+    <nav className=" bg-green-950 border-none rounded-t-xl text-white py-3 px-6 md:px-10 lg:px-16  sticky top-0 z-50">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
       
@@ -105,11 +105,11 @@ after:bg-green-400 /* Explicitly set again for safety */
         </div>
 
         {/* Login Button (Desktop) */}
-        <div className="hidden md:block">
+        {/* <div className="hidden md:block">
           <button className=" bg-gradient-to-r from-green-400 to-gray-700 transition delay-150  ease-in-out hover:-translate-y-1 hover:scale-110  p-3 text-gray-900 font-semibold py-2 px-5  duration-300 border-none rounded-full">
             Login
-          </button>
-        </div>
+          </button> */}
+        {/* </div> */}
 
         {/* --- Mobile Menu Button --- */}
         <div className="md:hidden">

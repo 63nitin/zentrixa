@@ -54,7 +54,7 @@ function Hero() {
 
   return (
     // Added border class back correctly (removed -1)
-    <section className="bg-gradient-to-b border border-green-800 rounded-b-xl from-green-800 to-gray-950 text-white min-h-[calc(100vh-68px)] flex items-center py-16 px-6 md:px-10 lg:px-16">
+    <section className="bg-gradient-to-b  from-green-950 to-gray-950  rounded-b-xl text-white min-h-[calc(100vh-68px)] flex items-center py-16 px-6 md:px-10 lg:px-16">
       <div className="container mx-auto grid md:grid-cols-2 gap-10 items-center">
 
         {/* Left Column: Text Content */}
@@ -77,7 +77,7 @@ function Hero() {
 
           {/* Illustration Placeholder */}
           <div className="w-full max-w-md h-64 md:h-80 lg:h-96 rounded-lg flex items-center justify-center text-gray-500 mb-8">
-            Illustration Placeholder
+            <img src="/Hero.png" alt="" className='rounded-2xl' />
           </div>
 
           {/* Snippets Wrapper - Observed Element */}
@@ -92,7 +92,7 @@ function Hero() {
               {/* Layout & Static Styles */}
               w-full sm:w-auto md:absolute md:top-0 md:right-0 md:-mt-5 md:-mr-5 md:w-32
               p-3 rounded-lg shadow-2xl border border-green-700 text-xs text-center
-              bg-gray-950/50 backdrop-blur-sm
+              bg-gray-950/50 bg-transparent backdrop-blur-sm
 
               {/* --- Base Animation Styles --- */}
               transition-all duration-500 ease-out {/* Defines the transition effect */}
@@ -103,8 +103,8 @@ function Hero() {
                 : 'opacity-0 translate-y-10' /* Style when isVisible is false (out of view) */
               }
             `}>
-              <span role="img" aria-label="support icon" className="text-6xl text-green-400">🎧</span>
-              <p className='text-lg text-green-100 mt-3'>24/7 Hosting & Domain Support</p>
+              <span role="img" aria-label="support icon" className="text-5xl text-green-400">🎧</span>
+              <p className='text-md text-green-100 mt-3'>24/7 Hosting & Domain Support</p>
             </div>
 
             {/* Snippet 2 */}
@@ -112,7 +112,7 @@ function Hero() {
               {/* Layout & Static Styles */}
               w-full sm:w-auto md:absolute md:bottom-0 md:left-0 md:-mb-8 md:-ml-5 md:w-32
               p-3 rounded-lg shadow-2xl border border-green-700 text-xs text-center
-              bg-gray-950/50 backdrop-blur-sm
+              bg-gray-950/50 bg-transparent backdrop-blur-sm
 
               {/* --- Base Animation Styles (with delay) --- */}
               transition-all duration-500 ease-out delay-100 {/* Staggered start */}
@@ -124,7 +124,7 @@ function Hero() {
               }
             `}>
               <span role="img" aria-label="guarantee icon" className="text-6xl">🛡️</span>
-              <p className='text-lg text-green-100 mt-3'>Lifetime Website Guarantee</p>
+              <p className='text-md text-green-100 mt-3'>Lifetime Website Guarantee</p>
             </div>
 
             {/* Snippet 3 */}
@@ -132,7 +132,7 @@ function Hero() {
               {/* Layout & Static Styles */}
               w-full sm:w-auto md:absolute md:bottom-0 md:right-0 md:-mb-5 md:-mr-8 md:w-32
               p-3 rounded-lg shadow-lg border border-green-700 text-xs text-center
-              bg-gray-950/50 backdrop-blur-sm
+              bg-gray-950/50 bg-transparent backdrop-blur-sm
 
               {/* --- Base Animation Styles (with delay) --- */}
               transition-all duration-500 ease-out delay-200 {/* Staggered start */}
@@ -144,7 +144,7 @@ function Hero() {
               }
             `}>
               <span role="img" aria-label="security icon" className="text-6xl">🔒</span>
-              <p className='text-lg text-green-100 mt-3'>Free SSL & Security Features</p>
+              <p className='text-md text-green-100 mt-3'>Free SSL & Security Features</p>
             </div>
           </div>{/* End Snippets Wrapper */}
         </div>{/* End Right Column */}

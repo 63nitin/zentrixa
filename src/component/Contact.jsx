@@ -34,7 +34,7 @@ const socialLinks = [
 
 function Contact() {
   return (
-    <footer className=" text-gray-300 py-16 px-6">
+    <footer className="bg-gradient-to-b  from-green-950 to-gray-950  text-gray-300 py-16 px-6">
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 xl:gap-16">
 
         {/* Column 1: Info & Social */}

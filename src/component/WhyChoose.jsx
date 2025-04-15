@@ -50,7 +50,7 @@ function WhyChooseUs() {
           <div className="flex justify-center">
             {/* Replace with your actual illustration */}
             <div className="w-full max-w-md lg:max-w-lg h-64 md:h-80 bg-gradient-to-br from-green-500/20 to-gray-800/20 rounded-lg flex items-center justify-center text-gray-500">
-              Illustration Placeholder
+             <img src="/Choose.png" alt="" className='rounded-2xl' />
               {/* e.g., <img src="/path/to/your/illustration.svg" alt="Hosting hardware illustration" className="w-full h-auto object-contain" /> */}
             </div>
           </div>

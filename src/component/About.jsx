@@ -8,7 +8,7 @@ import { FiCpu, FiDatabase, FiCloud, FiLayers } from "react-icons/fi";
 const About = () => {
   return (
     // Section Styling: Changed background to match project's dark theme
-    <section className="py-16 md:py-24  text-gray-300">
+    <section className=" bg-gradient-to-b  from-green-950 to-gray-950  py-16 md:py-24  text-gray-300">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 xl:px-12">
 
         {/* Section Header */}

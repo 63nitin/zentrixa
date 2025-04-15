@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ServiceCard from './ServiceCard'; 
+import PricingPlan from './PricingCard';
 
 // --- Placeholder Icons ---
 // TODO: Replace these with actual relevant SVGs or icons from a library (e.g., Heroicons)
@@ -55,7 +56,7 @@ const servicesData = [
 
 function ServicesPage() {
   return (
-    <div className=" text-white min-h-screen">
+    <div className="bg-gradient-to-b  from-green-950 to-gray-950  text-white min-h-screen">
    
 
       <div className="container mx-auto px-6 py-16 md:py-24">
@@ -96,6 +97,7 @@ function ServicesPage() {
          
         </div>
       </div>
+      <PricingPlan/>
     </div>
   );
 }
