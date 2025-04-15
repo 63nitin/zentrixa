@@ -97,7 +97,6 @@ function ServicesPage() {
          
         </div>
       </div>
-      <PricingPlan/>
     </div>
   );
 }
