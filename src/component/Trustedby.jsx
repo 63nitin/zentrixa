@@ -65,7 +65,7 @@ function TrustedBy() {
 
   return (
     // Added background color here as it was missing
-    <section className="bg-gray-950 py-16 sm:py-20 overflow-hidden"> {/* Added overflow-hidden */}
+    <section className=" py-16 sm:py-20 overflow-hidden"> {/* Added overflow-hidden */}
       <div className="container mx-auto px-6 text-center">
         {/* Headline */}
         <h2 className="text-lg sm:text-xl text-gray-300 mb-12">

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import ServiceCard from './ServiceCard'; 
-import PricingPlan from './PricingCard';
+import ServiceCard from './ServiceCard';
 
 // --- Placeholder Icons ---
 // TODO: Replace these with actual relevant SVGs or icons from a library (e.g., Heroicons)
