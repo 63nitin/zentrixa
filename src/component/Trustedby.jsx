@@ -65,14 +65,14 @@ function TechStack() {
           {techStack.map((tech, index) => (
             // Each tech icon is a slide
             // Use px-* for spacing. Use text-* for icon size.
-            <div key={index} className="!flex flex-col justify-center items-center  px-3 h-20 text-center">
+            <div key={index} className="!flex flex-col justify-center items-center   px-3 h-20 text-center">
                {/* Render the Icon Component */}
                <tech.IconComponent
-                  className={`text-4xl md:text-5xl ${tech.color || 'text-gray-400'} scale-110  transition-colors duration-200  border border-transparent rounded-2xl p-1 hover:border-yellow-300`}
+                  className={`text-9xl scale-150 md:text-5xl ${tech.color || 'text-gray-400'}   transition-colors duration-200  border border-transparent rounded-2xl p-1 hover:border-yellow-300`}
                   title={tech.name} // Tooltip
                />
                {/* Optional: Add text label below icon */}
-               {/* <span className="text-xs mt-2 text-gray-500">{tech.name}</span> */}
+               <span className="text-md hover:text-green-400 mt-2 text-gray-500">{tech.name}</span>
             </div>
           ))}
         </Slider>
