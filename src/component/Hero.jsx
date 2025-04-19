@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 function Hero() {
   // ---- Animation State & Ref ----
@@ -69,8 +70,8 @@ function Hero() {
   // Assuming dark theme, ensure text is visible
   className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4 text-white"
 >
-  Fast & Reliable <br /> Hosting With <br />
-  <span className="text-green-400">Trusted Domains</span>
+Websites That <span className="text-green-400">Attract, Engage</span> <br />and convert <br />
+ 
 </motion.h1>
 
 {/* Animated Paragraph */}
@@ -81,26 +82,22 @@ function Hero() {
   transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
   className="text-lg text-gray-400 mb-8 max-w-lg mx-auto md:mx-0"
 >
-  Get Secure, High Performance Hosting And Trusted Domains To Keep Your Website Running Smoothly—Anytime, Anywhere.
+We build user-centric websites and landing pages optimized for search engines and designed to turn your online presence into a powerful growth engine.
 </motion.p>
 
 {/* Animated Button */}
-<motion.button
-  initial={{ opacity: 0, y: 20 }}
-  animate={{ opacity: 1, y: 0 }}
-  // Add further delay
-  transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-  // Option 1: Keep Tailwind hover (remove conflicting transition classes if needed)
-  // className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg text-lg hover:-translate-y-1 transition-transform duration-200"
-
-  // Option 2: Use Framer Motion hover (cleaner integration)
-  whileHover={{ y: -3, scale: 1.03, transition: { duration: 0.2 } }} // Example Framer Motion hover
-  whileTap={{ scale: 0.97 }}
-  // Apply base styles - adjusted bg color to match other buttons
-  className="bg-green-500 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-md"
->
-  Explore More
-</motion.button>
+<Link to="/service">
+  <motion.button
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+    whileHover={{ y: -3, scale: 1.03 }}
+    whileTap={{ scale: 0.97 }}
+    className="inline-block bg-green-500 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-md"
+  >
+    Explore More
+  </motion.button>
+</Link>
 
 </div>
 

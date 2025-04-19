@@ -1,6 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import ServiceCard from './ServiceCard';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
 
 // --- Placeholder Icons ---
 // TODO: Replace these with actual relevant SVGs or icons from a library (e.g., Heroicons)
@@ -77,9 +79,18 @@ function ServicesPage() {
             <p className="text-base hover:text-green-200 text-gray-400 mb-6">
               Explore Top-Tier Web And Digital Services To Kickstart And Grow Your Online Presence With Ease And Reliability.
             </p>
-            <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-2.5 px-6 rounded-lg transition duration-300">
-              View All Services {/* Consider linking this somewhere */}
-            </button>
+            <Link to="/plans">
+  <motion.button
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+    whileHover={{ y: -3, scale: 1.03 }}
+    whileTap={{ scale: 0.97 }}
+    className="inline-block bg-green-500 text-white font-semibold py-3 px-8 rounded-lg text-lg shadow-md"
+  >
+    Explore More
+  </motion.button>
+</Link>
           </div>
         </div>
 

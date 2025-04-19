@@ -1,94 +1,78 @@
 import React from 'react';
-import Slider from 'react-slick'; // Import Slider component
+import Slider from 'react-slick';
 
-// Import Slick Carousel CSS (if not imported in main CSS file)
+// Import Slick Carousel CSS
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// Array of placeholder logo URLs (Replace with your actual logos)
-const logos = [
-  'https://logoipsum.com/288/logoipsum-logo-5.svg',
-  'https://logoipsum.com/288/logoipsum-logo-6.svg',
-  'https://logoipsum.com/288/logoipsum-logo-7.svg',
-  'https://logoipsum.com/288/logoipsum-logo-10.svg',
-  'https://logoipsum.com/288/logoipsum-logo-13.svg',
-  'https://logoipsum.com/288/logoipsum-logo-14.svg',
-  'https://logoipsum.com/288/logoipsum-logo-11.svg',
-  'https://logoipsum.com/288/logoipsum-logo-3.svg',
-  'https://logoipsum.com/288/logoipsum-logo-1.svg',
-  // Add more logos if desired for smoother looping effect
+// --- Import specific icons from react-icons ---
+// Search https://react-icons.github.io/react-icons/ for icons
+// Using 'di' for Devicons, 'si' for SimpleIcons, 'fa' for FontAwesome etc.
+import { DiReact, DiNodejsSmall, DiMongodb, DiPostgresql, DiPython, DiHtml5, DiCss3 } from 'react-icons/di';
+import { SiNextdotjs, SiJavascript, SiTailwindcss } from 'react-icons/si';
+
+// --- Define Technology Stack Data using Icon Components ---
+const techStack = [
+  { name: 'React.js', IconComponent: DiReact, color: "text-sky-400" }, // Assign colors if desired
+  { name: 'Next.js', IconComponent: SiNextdotjs, color: "text-white" },
+  { name: 'Node.js', IconComponent: DiNodejsSmall, color: "text-green-500" },
+  { name: 'JavaScript', IconComponent: SiJavascript, color: "text-yellow-400" },
+  { name: 'Python', IconComponent: DiPython, color: "text-blue-400" },
+  { name: 'HTML5', IconComponent: DiHtml5, color: "text-orange-500" },
+  { name: 'CSS3', IconComponent: DiCss3, color: "text-blue-500" },
+  { name: 'Tailwind CSS', IconComponent: SiTailwindcss, color: "text-sky-500" },
+  { name: 'MongoDB', IconComponent: DiMongodb, color: "text-green-600" },
+  { name: 'PostgreSQL', IconComponent: DiPostgresql, color: "text-blue-600" },
 ];
 
-function TrustedBy() {
-
-  // Settings object for the react-slick carousel
-  const settings = {
-    dots: false,            // Hide pagination dots
-    arrows: false,          // Hide navigation arrows
-    infinite: true,         // Enable infinite looping
-    speed: 500,             // Transition speed in milliseconds (e.g., 500ms)
-    autoplay: true,         // Enable autoplay
-    autoplaySpeed: 3000,    // **Slide change interval: 3000ms = 3 seconds**
-    cssEase: "linear",      // Type of easing for transitions
-    pauseOnHover: true,     // Pause autoplay when hovering over the slider
-    swipeToSlide: true,     // Allow sliding using swipe gestures
-    variableWidth: true,    // Adjust slide width based on content (good for logos)
-    slidesToShow: 5,        // Default number of slides to show on larger screens
-    slidesToScroll: 1,      // How many slides to scroll at a time
-    responsive: [           // Responsive settings for different screen sizes
-      {
-        breakpoint: 1280, // screens wider than 1280px (use settings above)
-        settings: {
-          slidesToShow: 5,
-        }
-      },
-      {
-        breakpoint: 1024, // screens less than 1024px wide
-        settings: {
-          slidesToShow: 4,
-        }
-      },
-      {
-        breakpoint: 768,  // screens less than 768px wide
-        settings: {
-          slidesToShow: 3,
-        }
-      },
-      {
-        breakpoint: 640,  // screens less than 640px wide
-        settings: {
-          slidesToShow: 2,
-        }
-      }
+function TechStack() {
+   const settings = {
+    // Keep your existing slider settings, but maybe adjust slidesToShow
+    dots: false,
+    arrows: false,
+    infinite: true,
+    speed: 800,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    cssEase: "ease-in-out",
+    pauseOnHover: true,
+    swipeToSlide: true,
+    // variableWidth might not be needed if icons have similar size/container
+    // variableWidth: true,
+    slidesToShow: 6, // Adjust based on icon size/spacing
+    slidesToScroll: 1,
+    responsive: [
+         { breakpoint: 1280, settings: { slidesToShow: 6 } },
+         { breakpoint: 1024, settings: { slidesToShow: 5 } },
+         { breakpoint: 768, settings: { slidesToShow: 4 } },
+         { breakpoint: 640, settings: { slidesToShow: 3 } },
+         { breakpoint: 480, settings: { slidesToShow: 2 } }
     ]
   };
 
   return (
-    // Added background color here as it was missing
-    <section className=" py-16 sm:py-20 overflow-hidden"> {/* Added overflow-hidden */}
+    <section className="py-16 sm:py-20 overflow-hidden">
       <div className="container mx-auto px-6 text-center">
-        {/* Headline */}
-        <h2 className="text-lg sm:text-xl text-gray-300 mb-12">
-          See How <span className="text-green-400 font-semibold">10,000+</span> Customers Trust Us To Power Their Websites.
+        {/* Headline remains the same */}
+        <h2 className="text-2xl lg:text-3xl font-bold text-white mb-4">
+          Powering Your Project with <span className="text-green-400">Leading Technology</span>
         </h2>
+        <p className="text-base text-gray-400 mb-12 md:mb-16 max-w-2xl mx-auto">
+           We leverage a modern stack including React, Node.js, Python, and more to build fast, scalable, and effective web solutions.
+        </p>
 
-        {/* react-slick Slider Component */}
-        {/* Apply negative margins or adjust container padding if needed to make slides flow edge-to-edge */}
         <Slider {...settings}>
-          {logos.map((logoUrl, index) => (
-            // Each child of Slider is a slide. Add padding/margin here for spacing.
-            <div key={index} className="!flex justify-center items-center px-4 h-16"> {/* Adjust padding (px-4) and height */}
-              <img
-                src={logoUrl}
-                alt={`Client Logo ${index + 1}`} // IMPORTANT: Replace with actual client names
-                className="
-                  max-h-8 md:max-h-10   {/* Control max logo height */}
-                  w-auto                {/* Maintain aspect ratio */}
-                  opacity-60           {/* Make logos subtle */}
-                  filter grayscale      {/* Make logos monochromatic */}
-                  mx-auto               {/* Center logo within its slide space */}
-                "
-              />
+          {techStack.map((tech, index) => (
+            // Each tech icon is a slide
+            // Use px-* for spacing. Use text-* for icon size.
+            <div key={index} className="!flex flex-col justify-center items-center  px-3 h-20 text-center">
+               {/* Render the Icon Component */}
+               <tech.IconComponent
+                  className={`text-4xl md:text-5xl ${tech.color || 'text-gray-400'} scale-110  transition-colors duration-200  border border-transparent rounded-2xl p-1 hover:border-yellow-300`}
+                  title={tech.name} // Tooltip
+               />
+               {/* Optional: Add text label below icon */}
+               {/* <span className="text-xs mt-2 text-gray-500">{tech.name}</span> */}
             </div>
           ))}
         </Slider>
@@ -97,4 +81,4 @@ function TrustedBy() {
   );
 }
 
-export default TrustedBy;
+export default TechStack;

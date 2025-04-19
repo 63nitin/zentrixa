@@ -1,40 +1,27 @@
 import React from 'react';
 import FeatureCard from './FeatureCard'; // Import the sub-component
+import { FaRocket, FaShieldAlt,FaSearch } from 'react-icons/fa';
+import {FiTarget} from 'react-icons/fi'
 
-// Placeholder Icon Components (Replace with actual SVGs or library icons)
-const SupportIcon = (props) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-    </svg>
-);
-const UptimeIcon = (props) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" >
-      <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
-    </svg>
-);
-const ControlPanelIcon = (props) => (
-    <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 6h9.75M10.5 6a1.5 1.5 0 1 1-3 0m3 0a1.5 1.5 0 1 0-3 0M3.75 6H7.5m3 12h9.75m-9.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-3.75 0H7.5m9-6h3.75m-3.75 0a1.5 1.5 0 0 1-3 0m3 0a1.5 1.5 0 0 0-3 0m-9.75 0h9.75" />
-    </svg>
-);
+
 
 
 // Data for the feature cards
 const features = [
   {
-    IconComponent: SupportIcon,
-    title: '24/7 Customer Support',
-    description: 'Choose A Payment Plan That Works For You And Start Learning Without Financial Worries.', // Replace with relevant text
+    IconComponent: FaRocket,
+    title: 'Performance-Driven Code',
+    description: ' We build custom websites using modern frameworks like React & Next.js, optimized for blazing-fast load times, scalability, and a seamless user experience.', // Replace with relevant text
   },
   {
-    IconComponent: UptimeIcon,
-    title: '99.9% Uptime Guarantee',
+    IconComponent: FaSearch,
+    title: ' SEO Integration',
     description: 'Enjoy Dependable Hosting With Our Promise To Keep Your Website Running Smoothly And Reliably.', // Replace with relevant text
   },
   {
-    IconComponent: ControlPanelIcon,
-    title: 'Easy-To-Use Control Panel',
-    description: 'Our Intuitive Control Panel Makes Managing Your Website And Domains Simple, Even For Beginners.', // Replace with relevant text
+    IconComponent: FiTarget,
+    title: '  Custom Solutions / Startup Fit',
+    description: 'We create bespoke websites and landing pages perfectly aligned with your brand identity and business goals, designed for flexibility as you grow.', // Replace with relevant text
   },
 ];
 
@@ -61,11 +48,10 @@ function WhyChooseUs() {
               Why Us
             </span>
             <h2 className="text-3xl lg:text-4xl font-bold leading-tight mb-5">
-              We Are Experts In <br /> {/* Consider <span className="text-green-400">Experts In</span> */}
-              Hosting & Domain Solutions
+            Beyond Code <br /> <span className="text-green-400">Building Your Digital Foundation</span>
             </h2>
             <p className="text-lg text-gray-400 mb-8">
-              With Rapidhost, You Gain Full Control Over Your Website's Performance, Security, And Stability. Our Proactive Solutions Ensure Your Online Presence Is Fast, Secure, And Hassle-Free, Giving You The Freedom To Focus On What Matters Most – Growing Your Business. {/* Replace with relevant text */}
+            We don't just build websites; we build digital assets designed for growth. Our team combines clean code, user-centric design, and strategic SEO insights to ensure your online presence is powerful and effective from day one.
             </p>
             <button className="bg-green-500 hover:bg-green-600 text-white font-semibold py-3 px-8 rounded-lg text-lg transition duration-300">
               Explore More

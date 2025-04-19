@@ -2,7 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Navbar from "./component/Navbar"
 import Hero from "./component/Hero"
-import TrustedBy from "./component/Trustedby"
+import TechStack from './component/Trustedby';
 import WhyChooseUs from "./component/WhyChoose"
 import PricingCard from "./component/PricingCard"
 import ServicesPage from "./component/ServicePage"
@@ -11,12 +11,14 @@ import Contact from "./component/Contact"
 import MyComponent from "./component/LogoAnimate"
 import About from "./component/About"
 import Footer from './component/Footer';
+import WhatsAppButton from "./component/WhatsAppButton";
+import Plan from './component/Plan';
 
 function HomePage() {
   return (
     <>
       <Hero/>
-     <TrustedBy/>
+     <TechStack/>
      <WhyChooseUs/>
      <PricingCard/>
      <ServicesPage/>
@@ -28,7 +30,7 @@ function HomePage() {
 
 function App() {
   return(
-   <div className="p-5">
+   <div className="p-4">
       <Navbar />
 
       <Routes>
@@ -37,10 +39,11 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/service" element={<ServicesPage/> } />
         <Route path="/contact" element={<Contact/>} />
+        <Route path="/plans" element={<Plan/>} />
       </Routes>
 
       <Footer />
-
+      <WhatsAppButton />
 
    </div>
   )
