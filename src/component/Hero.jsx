@@ -183,4 +183,4 @@ We build user-centric websites and landing pages optimized for search engines an
   );
 }
 
-export default Hero;
+export default React.memo(Hero);

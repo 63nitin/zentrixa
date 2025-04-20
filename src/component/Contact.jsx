@@ -17,7 +17,7 @@ const ChevronDownIcon = (props) => (
 );
 
 
-export default function Contact() {
+ function Contact() {
   // TODO: Add state and handler for form submission
   // const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   // const handleSubmit = (e) => { e.preventDefault(); console.log(formData); }
@@ -147,7 +147,7 @@ export default function Contact() {
                     </div>
                     <div className="ml-3 sm:ml-4">
                       <h4 className="text-sm sm:text-base font-semibold text-white">Phone</h4>
-                      <a href="tel:+15551234567" className="text-xs sm:text-sm text-gray-400 hover:text-green-400 mt-1 block">+1 (555) 123-4567</a> {/* Replace */}
+                      <a href="tel:+918423287003" className="text-xs sm:text-sm text-gray-400 hover:text-green-400 mt-1 block">+91-8423287003</a> {/* Replace */}
                     </div>
                   </div>
                    {/* Email */}
@@ -157,7 +157,7 @@ export default function Contact() {
                      </div>
                      <div className="ml-3 sm:ml-4">
                        <h4 className="text-sm sm:text-base font-semibold text-white">Email</h4>
-                       <a href="mailto:support@zentrixa.com" className="text-xs sm:text-sm text-gray-400 hover:text-green-400 mt-1 block">support@zentrixa.com</a> {/* Replace */}
+                       <a href="mailto:support@zentrixa.com" className="text-xs sm:text-sm text-gray-400 hover:text-green-400 mt-1 block">sriyanshuawasthi@gmail.com</a> {/* Replace */}
                      </div>
                    </div>
                    {/* Address */}
@@ -167,7 +167,7 @@ export default function Contact() {
                      </div>
                      <div className="ml-3 sm:ml-4">
                        <h4 className="text-sm sm:text-base font-semibold text-white">Address</h4>
-                       <p className="text-xs sm:text-sm text-gray-400 mt-1">123 Dev Lane<br />Prayagraj, UP, India</p> {/* Replace */}
+                       <p className="text-xs sm:text-sm text-gray-400 mt-1">BKT Lane<br />Lucknow, UP, India</p> {/* Replace */}
                      </div>
                    </div>
                    {/* Support Hours (Optional) */}
@@ -205,7 +205,7 @@ export default function Contact() {
                     <LocationIcon className="w-8 h-8 sm:w-10 sm:h-10 text-green-400" />
                  </div>
                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">Zentrixa HQ</h3>
-                 <p className="text-xs sm:text-sm text-gray-400">Prayagraj, Uttar Pradesh</p>
+                 <p className="text-xs sm:text-sm text-gray-400">Lucknow, Uttar Pradesh</p>
                   {/* Add a link to Google Maps */}
                   <a
                      href="#" // Add Google Maps link here
@@ -269,3 +269,5 @@ export default function Contact() {
     </div>
   );
 }
+
+export default React.memo(Contact)

@@ -65,10 +65,10 @@ function TechStack() {
           {techStack.map((tech, index) => (
             // Each tech icon is a slide
             // Use px-* for spacing. Use text-* for icon size.
-            <div key={index} className="!flex flex-col justify-center items-center   px-3 h-20 text-center">
+            <div key={index} className="!flex flex-col mt-2 justify-center items-center   px-3 h-20 text-center">
                {/* Render the Icon Component */}
                <tech.IconComponent
-                  className={`text-9xl scale-150 md:text-5xl ${tech.color || 'text-gray-400'}   transition-colors duration-200  border border-transparent rounded-2xl p-1 hover:border-yellow-300`}
+                  className={`text-9xl scale-150 md:text-5xl ${tech.color || 'text-gray-400'} mt-2   transition-colors duration-200  border border-transparent rounded-2xl p-1 hover:border-yellow-300`}
                   title={tech.name} // Tooltip
                />
                {/* Optional: Add text label below icon */}
@@ -81,4 +81,4 @@ function TechStack() {
   );
 }
 
-export default TechStack;
+export default React.memo(TechStack);

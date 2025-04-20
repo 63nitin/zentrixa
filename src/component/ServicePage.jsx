@@ -111,4 +111,4 @@ function ServicesPage() {
   );
 }
 
-export default ServicesPage;
+export default React.memo(ServicesPage);

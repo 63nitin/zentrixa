@@ -37,7 +37,7 @@ function Footer() {
           <div>
             {/* Logo (reuse from navbar) */}
             <Link to="/" className="inline-block mb-4" aria-label="Go to Homepage">
-              <img src="/ZentrixaLogo.png" alt="Zentrixa Logo" className="h-12 w-auto ml-4 scale-300 " />
+              <img src="/ZentrixaLogo.png" alt="Zentrixa Logo" loading='lazy' className="h-12 w-auto ml-4 scale-300 " />
               {/* Optionally add text part if needed: <span className="text-xl font-bold text-white ml-2">entrixa</span> */}
             </Link>
             <p className="text-sm leading-relaxed mt-3">
@@ -51,7 +51,7 @@ function Footer() {
             <ul className="space-y-2 text-sm">
               <li><Link to="/" className={linkStyle}>Home</Link></li>
               <li><Link to="/about" className={linkStyle}>About Us</Link></li>
-              <li><Link to="/services" className={linkStyle}>Services</Link></li>
+              <li><Link to="/service" className={linkStyle}>Services</Link></li>
               {/* Add other key links */}
               {/* <li><Link to="/contact" className={linkStyle}>Contact</Link></li> */}
             </ul>
@@ -62,10 +62,10 @@ function Footer() {
             <h5 className="text-base font-semibold text-white mb-4 tracking-wide">Our Expertise</h5>
             <ul className="space-y-2 text-sm">
                {/* Update these links if you have specific service anchors/pages */}
-              <li><Link to="/services#web-development" className={linkStyle}>Web Development</Link></li>
-              <li><Link to="/services#social-media" className={linkStyle}>Social Media</Link></li>
-              <li><Link to="/services#reputation" className={linkStyle}>Reputation Management</Link></li>
-              <li><Link to="/services#analytics" className={linkStyle}>Analytics</Link></li>
+              <li><Link to="/service" className={linkStyle}>Web Development</Link></li>
+              <li><Link to="/service" className={linkStyle}>Social Media</Link></li>
+              <li><Link to="/service" className={linkStyle}>Reputation Management</Link></li>
+              <li><Link to="/service" className={linkStyle}>Analytics</Link></li>
             </ul>
           </div>
 

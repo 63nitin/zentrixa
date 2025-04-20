@@ -82,4 +82,4 @@ const PricingPlan = () => {
   );
 };
 
-export default PricingPlan;
+export default React.memo(PricingPlan);

@@ -88,6 +88,7 @@ after:bg-green-400 /* Explicitly set again for safety */
 
     // Add descriptive alt text for accessibility
     alt="Zentrixa Logo"
+    loading='lazy'
 
     className="p-0 h-12 w-14 scale-350 ml-12 border-none "
   />

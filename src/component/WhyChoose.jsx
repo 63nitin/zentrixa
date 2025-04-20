@@ -76,4 +76,4 @@ function WhyChooseUs() {
   );
 }
 
-export default WhyChooseUs;
+export default React.memo(WhyChooseUs);
