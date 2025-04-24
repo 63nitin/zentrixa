@@ -53,7 +53,7 @@ function Footer() {
               <li><Link to="/about" className={linkStyle}>About Us</Link></li>
               <li><Link to="/service" className={linkStyle}>Services</Link></li>
               {/* Add other key links */}
-              {/* <li><Link to="/contact" className={linkStyle}>Contact</Link></li> */}
+              <li><Link to="/contact" className={linkStyle}>Contact</Link></li>
             </ul>
           </div>
 

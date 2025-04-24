@@ -20,7 +20,7 @@ function HomePage() {
       <Hero/>
      <TechStack/>
      <WhyChooseUs/>
-     <PricingCard/>
+     {/* <PricingCard/> */}
      <ServicesPage/>
      <StepsSection/>
     </>
